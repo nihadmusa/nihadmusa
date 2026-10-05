@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 46" width="560" height="46" role="img" aria-label="Java Backend Engineer">
+  <defs>
+    <filter id="tGlow" x="-40%" y="-120%" width="180%" height="340%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes line {
+        0%   { opacity: 0; }
+        1.5% { opacity: 1; }
+        23%  { opacity: 1; }
+        25%  { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      @keyframes blink {
+        0%,49%   { opacity: 1; }
+        50%,100% { opacity: 0; }
+      }
+      @keyframes prompt {
+        0%,100% { opacity: .45; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect width="560" height="46" rx="10" fill="#07030f" fill-opacity="0.85" stroke="#5b2ea6" stroke-width="1.2"/>
+
+  <text x="16" y="31" font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="20"
+        fill="#ff2bd6" style="animation:prompt 2s ease-in-out infinite;">&gt;</text>
+
+  <g font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="21" font-weight="600" filter="url(#tGlow)">
+    <g style="animation:line 12s linear infinite;">
+      <text x="40" y="31" fill="#00eaff">Java Backend Developer</text>
+      <rect x="376" y="14" width="12" height="22" fill="#00eaff" style="animation:blink 1s step-end infinite; animation-delay:.1s;"/>
+    </g>
+    <g style="animation:line 12s linear infinite; animation-delay:3s;">
+      <text x="40" y="31" fill="#7ae0ff">Spring Boot &amp; Microservices</text>
+      <rect x="439" y="14" width="12" height="22" fill="#7ae0ff" style="animation:blink 1s step-end infinite; animation-delay:.6s;"/>
+    </g>
+    <g style="animation:line 12s linear infinite; animation-delay:6s;">
+      <text x="40" y="31" fill="#b14aff">Redis . Kafka . JWT . JPA</text>
+      <rect x="423" y="14" width="12" height="22" fill="#b14aff" style="animation:blink 1s step-end infinite; animation-delay:.2s;"/>
+    </g>
+    <g style="animation:line 12s linear infinite; animation-delay:9s;">
+      <text x="40" y="31" fill="#ff2bd6">Clean Code . Fast Delivery</text>
+      <rect x="439" y="14" width="12" height="22" fill="#ff2bd6" style="animation:blink 1s step-end infinite; animation-delay:.8s;"/>
+    </g>
+  </g>
+</svg>

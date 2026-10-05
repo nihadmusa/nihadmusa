@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-label="Animated code terminal">
+  <defs>
+    <linearGradient id="winBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0518"/>
+      <stop offset="100%" stop-color="#050310"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00eaff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff2bd6" stop-opacity="0.30"/>
+    </linearGradient>
+    <linearGradient id="cursorGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00eaff"/>
+      <stop offset="100%" stop-color="#b14aff"/>
+    </linearGradient>
+    <filter id="cGlow" x="-50%" y="-120%" width="200%" height="340%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="barGlow" x="-40%" y="-200%" width="180%" height="500%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="bodyClip"><rect x="0" y="42" width="760" height="358"/></clipPath>
+    <style>
+      @keyframes type {
+        0%   { opacity: 0; }
+        1.2% { opacity: 1; }
+        92%  { opacity: 1; }
+        100% { opacity: 1; }
+      }
+      @keyframes blink {
+        0%,49%   { opacity: 1; }
+        50%,100% { opacity: 0; }
+      }
+      @keyframes winPulse {
+        0%,100% { stroke-opacity: .55; }
+        50% { stroke-opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect width="760" height="400" rx="14" fill="url(#winBg)" stroke="#6a2fb5" stroke-width="1.5" style="animation:winPulse 4s ease-in-out infinite;"/>
+
+  <!-- title bar -->
+  <path d="M14 0 h732 a14 14 0 0 1 14 14 v28 h-760 v-28 a14 14 0 0 1 14 -14 z" fill="#150a28"/>
+  <rect x="0" y="42" width="760" height="1.2" fill="url(#barGrad)" filter="url(#barGlow)"/>
+
+  <circle cx="26" cy="21" r="6" fill="#ff3b6b" filter="url(#cGlow)">
+    <animate attributeName="opacity" values="1;.55;1" dur="2.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="48" cy="21" r="6" fill="#ffc93c" filter="url(#cGlow)">
+    <animate attributeName="opacity" values="1;.55;1" dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="70" cy="21" r="6" fill="#25ff9d" filter="url(#cGlow)">
+    <animate attributeName="opacity" values="1;.55;1" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="380" y="26" text-anchor="middle" fill="#a98fd6"
+        font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="14" letter-spacing="1.5">NihadMusa.java</text>
+
+  <g clip-path="url(#bodyClip)" font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="15" filter="url(#cGlow)">
+    <text x="22" y="72"><tspan fill="#5f4b8a">1</tspan><tspan fill="#ff2bd6"> public class </tspan><tspan fill="#ffd166">BackendEngineer</tspan><tspan fill="#e6dcff"> {</tspan></text>
+
+    <g style="animation:type 9s linear infinite;">
+      <text x="22" y="104"><tspan fill="#5f4b8a">2</tspan><tspan fill="#ffd166">   @Bean</tspan></text>
+      <text x="22" y="130"><tspan fill="#5f4b8a">3</tspan><tspan fill="#ffd166">   SecurityFilterChain</tspan><tspan fill="#e6dcff"> auth(</tspan><tspan fill="#00eaff">HttpSecurity</tspan><tspan fill="#e6dcff"> http)</tspan><tspan fill="#e6dcff"> {</tspan></text>
+    </g>
+
+    <g style="animation:type 9s linear infinite; animation-delay:.45s;">
+      <text x="22" y="156"><tspan fill="#5f4b8a">4</tspan><tspan fill="#00eaff">     http</tspan><tspan fill="#e6dcff">.csrf(</tspan><tspan fill="#25ff9d">AbstractHttpConfigurer</tspan><tspan fill="#e6dcff">::disable)</tspan></text>
+    </g>
+
+    <g style="animation:type 9s linear infinite; animation-delay:.9s;">
+      <text x="22" y="182"><tspan fill="#5f4b8a">5</tspan><tspan fill="#00eaff">     http</tspan><tspan fill="#e6dcff">.authorizeHttpRequests(r -&gt; r</tspan></text>
+      <text x="40" y="208"><tspan fill="#5f4b8a">6</tspan><tspan fill="#e6dcff">       .requestMatchers(</tspan><tspan fill="#ff9f68">"/api/**"</tspan><tspan fill="#e6dcff">).permitAll()</tspan></text>
+    </g>
+
+    <g style="animation:type 9s linear infinite; animation-delay:1.35s;">
+      <text x="22" y="234"><tspan fill="#5f4b8a">7</tspan><tspan fill="#00eaff">     return http</tspan><tspan fill="#e6dcff">.build();</tspan></text>
+      <text x="22" y="260"><tspan fill="#5f4b8a">8</tspan><tspan fill="#e6dcff">   }</tspan></text>
+    </g>
+
+    <g style="animation:type 9s linear infinite; animation-delay:1.8s;">
+      <text x="22" y="292"><tspan fill="#ff2bd6">9</tspan><tspan fill="#e6dcff">   // cache-aside + redis ttl</tspan></text>
+      <text x="22" y="318"><tspan fill="#ff2bd6">10</tspan><tspan fill="#ffd166">  private</tspan><tspan fill="#e6dcff"> Optional&lt;User&gt; </tspan><tspan fill="#25ff9d">load</tspan><tspan fill="#e6dcff">(String id)</tspan><tspan fill="#e6dcff"> {</tspan></text>
+      <text x="40" y="344"><tspan fill="#ff2bd6">11</tspan><tspan fill="#e6dcff">    </tspan><tspan fill="#25ff9d">return</tspan><tspan fill="#e6dcff"> repo.findById(id);</tspan></text>
+      <text x="22" y="370"><tspan fill="#ff2bd6">12</tspan><tspan fill="#e6dcff">  }</tspan></text>
+    </g>
+
+    <text x="40" y="370" style="animation:blink 1.05s step-end infinite;">
+      <rect x="30" y="356" width="11" height="19" fill="url(#cursorGrad)"/>
+    </text>
+  </g>
+
+  <!-- right side glowing stat cards -->
+  <g transform="translate(516 70)" filter="url(#cGlow)">
+    <rect width="238" height="300" rx="12" fill="#0d0722" fill-opacity="0.75" stroke="#3a1d6b"/>
+    <text x="119" y="34" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="#a98fd6" letter-spacing="3">STACK</text>
+    <text x="24" y="76"  font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#00eaff">Java 21</text>
+    <text x="24" y="108" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#b14aff">Spring Boot</text>
+    <text x="24" y="140" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#ff2bd6">Microservices</text>
+    <text x="24" y="172" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#25ff9d">Redis / Kafka</text>
+    <text x="24" y="204" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#ffd166">JWT / OAuth2</text>
+    <text x="24" y="236" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#7ae0ff">PostgreSQL</text>
+    <text x="24" y="268" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#ff9f68">Docker</text>
+    <rect x="24" y="284" width="190" height="2" fill="url(#barGrad)">
+      <animate attributeName="width" values="40;190;40" dur="3.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <rect x="14" y="56" width="486" height="316" rx="10" fill="none" stroke="#2c1460" stroke-width="1"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="rocket">
+  <defs>
+    <linearGradient id="rg" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ff2bd6"/><stop offset="100%" stop-color="#00eaff"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/><stop offset="100%" stop-color="#ff3b6b" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="rf" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      @keyframes lift  { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-3px) } }
+      @keyframes flick { 0%,100% { opacity:.85; transform: scaleY(1) } 50% { opacity:.5; transform: scaleY(.72) } }
+    </style>
+  </defs>
+  <g style="animation:lift 3s ease-in-out infinite;">
+    <path d="M32 8 C41 17 44 27 44 35 L44 41 L20 41 L20 35 C20 27 23 17 32 8 Z"
+          fill="none" stroke="url(#rg)" stroke-width="2.6" stroke-linejoin="round" filter="url(#rf)"/>
+    <circle cx="32" cy="26" r="6" fill="none" stroke="#7ae0ff" stroke-width="2.2" filter="url(#rf)"/>
+    <path d="M20 33 L11 42 L20 44 Z" fill="#ff2bd6" filter="url(#rf)"/>
+    <path d="M44 33 L53 42 L44 44 Z" fill="#ff2bd6" filter="url(#rf)"/>
+    <rect x="26" y="41" width="12" height="5" rx="2.5" fill="#b14aff" filter="url(#rf)"/>
+    <path d="M28 47 q4 9 8 0 Z" fill="url(#flame)" filter="url(#rf)" style="animation:flick .45s ease-in-out infinite;"/>
+  </g>
+</svg>
