@@ -18,7 +18,7 @@
   <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"><img height="28" src="https://img.shields.io/badge/LinkedIn-00eaff?style=for-the-badge&logo=linkedin&logoColor=black&labelColor=0a0616" alt="LinkedIn" /></a>
   <a href="https://github.com/nihadmusa"><img height="28" src="https://img.shields.io/badge/GitHub-b14aff?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0616" alt="GitHub" /></a>
   <a href="mailto:nihad.musa41@gmail.com"><img height="28" src="https://img.shields.io/badge/Email-ff2bd6?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0616" alt="Email" /></a>
-  <a href="#OPEN-TO-WORK"><img height="28" src="https://img.shields.io/badge/open%20to%20work-25ff9d?style=for-the-badge&labelColor=0a0616" alt="Open to work" /></a>
+  <img height="28" src="https://img.shields.io/badge/open%20to%20work-25ff9d?style=for-the-badge&labelColor=0a0616" alt="Open to work" />
 </p>
 
 <p align="center">
@@ -148,10 +148,10 @@ Azərbaycandan **Java Backend Developer**.
   <summary><b>🐍 Contribution Snake</b> — klikləyin</summary>
   <br>
   <p align="center">
-    <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="snake dark" />
+    <img src="https://raw.githubusercontent.com/nihadmusa/nihadmusa/output/github-contribution-grid-snake-dark.svg" alt="snake dark" />
   </p>
   <p align="center">
-    <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg" alt="snake light" />
+    <img src="https://raw.githubusercontent.com/nihadmusa/nihadmusa/output/github-contribution-grid-snake.svg" alt="snake light" />
   </p>
 </details>
 
