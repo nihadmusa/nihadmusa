@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="projects">
   <defs>
     <filter id="ig" x="-45%" y="-45%" width="190%" height="190%">
-      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <style>
-      .s   { fill: none; stroke: #c9d1d9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-      .dim { stroke: #6e7681; stroke-width: 1.5; stroke-linecap: round; }
+      .s   { fill: none; stroke: #818cf8; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .dim { stroke: #6366f1; stroke-width: 1.5; stroke-linecap: round; opacity: .8; }
       @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-1.6px) } }
-      .g { animation: float 6.8s ease-in-out infinite; }
+      .g { animation: float 10s ease-in-out infinite; }
       @media (prefers-color-scheme: light) {
-        .s { stroke: #32383f } .dim { stroke: #8c959f }
+        .s { stroke: #4f46e5 } .dim { stroke: #6366f1 }
       }
       @media (prefers-reduced-motion: reduce) { .g { animation: none } }
     </style>
   </defs>
   <g class="g" filter="url(#ig)">
     <path class="s" d="M32 9 C40 18 43 27 43 34 L43 41 L21 41 L21 34 C21 27 24 18 32 9 Z"/>
-    <circle class="s" cx="32" cy="26" r="5.5" stroke-width="1.5"/>
+    <circle class="s" cx="32" cy="26" r="5.5" stroke-width="1.5" opacity=".75"/>
     <path class="dim" d="M21 32 L12 41 L21 44 Z"/>
     <path class="dim" d="M43 32 L52 41 L43 44 Z"/>
     <path class="s" d="M27 41 L27 47 L37 47 L37 41" stroke-width="1.5"/>

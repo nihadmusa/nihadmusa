@@ -6,17 +6,17 @@
     </filter>
 
     <style>
-      .bg   { fill: #0d1117; }
-      .bar  { fill: #161b22; }
-      .bd   { fill: none; stroke: #21262d; stroke-width: 1.2; }
-      .sep  { stroke: #21262d; stroke-width: 1; }
-      .num  { fill: #484f58; }
-      .code { fill: #c9d1d9; }
-      .kw   { fill: #e6edf3; font-weight: 600; }
-      .anno { fill: #8b949e; font-style: italic; }
-      .dot  { fill: #30363d; }
-      .ttl  { fill: #6e7681; }
-      .cur  { fill: #c9d1d9; }
+      .bg   { fill: #0d0d14; }
+      .bar  { fill: #14141f; }
+      .bd   { fill: none; stroke: #818cf8; stroke-opacity: .22; stroke-width: 1.2; }
+      .sep  { stroke: #2a2a3d; stroke-width: 1; }
+      .num  { fill: #4b5563; }
+      .code { fill: #cbd5e1; }
+      .kw   { fill: #f1f5f9; font-weight: 600; }
+      .anno { fill: #94a3b8; font-style: italic; }
+      .dot  { fill: #3f3f56; }
+      .ttl  { fill: #64748b; }
+      .cur  { fill: #818cf8; }
 
       /* each group owns a 3.5s window of the 14s loop.
          negative delays keep the stagger permanent across loops. */
@@ -29,24 +29,24 @@
       }
       @keyframes caretBreath { 0%,100% { opacity: .65 } 50% { opacity: 1 } }
 
-      .g1 { animation: reveal 14s linear infinite;            animation-delay: 0; }
-      .g2 { animation: reveal 14s linear infinite;            animation-delay: -3.5s; }
-      .g3 { animation: reveal 14s linear infinite;            animation-delay: -7s; }
-      .g4 { animation: reveal 14s linear infinite;            animation-delay: -10.5s; }
+      .g1 { animation: reveal 20s linear infinite;            animation-delay: 0; }
+      .g2 { animation: reveal 20s linear infinite;            animation-delay: -5s; }
+      .g3 { animation: reveal 20s linear infinite;            animation-delay: -10s; }
+      .g4 { animation: reveal 20s linear infinite;            animation-delay: -15s; }
       .cb { animation: caretBreath 2.8s ease-in-out infinite; }
 
       @media (prefers-color-scheme: light) {
         .bg   { fill: #ffffff; }
-        .bar  { fill: #f6f8fa; }
-        .bd   { stroke: #d0d7de; }
-        .sep  { stroke: #d0d7de; }
-        .num  { fill: #8c959f; }
-        .code { fill: #24292f; }
-        .kw   { fill: #1f2328; }
-        .anno { fill: #59636e; }
-        .dot  { fill: #afb8c1; }
-        .ttl  { fill: #818b98; }
-        .cur  { fill: #24292f; }
+        .bar  { fill: #f7f8fc; }
+        .bd   { stroke: #6366f1; stroke-opacity: .3; }
+        .sep  { stroke: #d9dce8; }
+        .num  { fill: #7c8798; }
+        .code { fill: #12141b; }
+        .kw   { fill: #0f1117; }
+        .anno { fill: #5b6472; }
+        .dot  { fill: #a8b3c4; }
+        .ttl  { fill: #7b8494; }
+        .cur  { fill: #4f46e5; }
       }
 
       @media (prefers-reduced-motion: reduce) {

@@ -1,17 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="code">
   <defs>
     <filter id="ig" x="-45%" y="-45%" width="190%" height="190%">
-      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <style>
-      .s   { fill: none; stroke: #c9d1d9; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-      .f   { fill: #c9d1d9; }
-      .dim { stroke: #6e7681; stroke-width: 1.4; stroke-linecap: round; }
+      .s   { fill: none; stroke: #818cf8; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .dim { stroke: #6366f1; stroke-width: 1.4; stroke-linecap: round; opacity: .8; }
       @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-1.6px) } }
-      .g { animation: float 5.8s ease-in-out infinite; }
+      .g { animation: float 8.4s ease-in-out infinite; }
       @media (prefers-color-scheme: light) {
-        .s { stroke: #32383f } .f { fill: #32383f } .dim { stroke: #8c959f }
+        .s { stroke: #4f46e5 } .dim { stroke: #6366f1 }
       }
       @media (prefers-reduced-motion: reduce) { .g { animation: none } }
     </style>

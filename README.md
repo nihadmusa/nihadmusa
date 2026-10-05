@@ -6,18 +6,18 @@
 -->
 
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="Nihad Musa" />
+  <img src="./assets/header.svg" width="100%" alt="Nihad Musayev" />
 </p>
 
 <p align="center">
-  <img src="./assets/typing.svg" width="540" alt="Role" />
+  <img src="./assets/typing.svg" width="560" alt="Role" />
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"><img height="26" src="https://img.shields.io/badge/LinkedIn-nihadmusa-161b22?style=flat-square&logo=linkedin&logoColor=8b949e" alt="LinkedIn" /></a>
-  <a href="https://github.com/nihadmusa"><img height="26" src="https://img.shields.io/badge/GitHub-nihadmusa-161b22?style=flat-square&logo=github&logoColor=8b949e" alt="GitHub" /></a>
-  <a href="mailto:nihad.musa41@gmail.com"><img height="26" src="https://img.shields.io/badge/Email-nihad.musa41@gmail.com-161b22?style=flat-square&logo=gmail&logoColor=8b949e" alt="Email" /></a>
-  <img height="26" src="https://img.shields.io/badge/open%20to%20work-161b22?style=flat-square" alt="Open to work" />
+  <a href="https://www.linkedin.com/in/nihad-musayev-766482393"><img height="26" src="https://img.shields.io/badge/LinkedIn-nihadmusa-14141f?style=flat-square&logo=linkedin&logoColor=818cf8" alt="LinkedIn" /></a>
+  <a href="https://github.com/nihadmusa"><img height="26" src="https://img.shields.io/badge/GitHub-nihadmusa-14141f?style=flat-square&logo=github&logoColor=818cf8" alt="GitHub" /></a>
+  <a href="mailto:nihad.musa41@gmail.com"><img height="26" src="https://img.shields.io/badge/Email-nihad.musa41@gmail.com-14141f?style=flat-square&logo=gmail&logoColor=818cf8" alt="Email" /></a>
+  <img height="26" src="https://img.shields.io/badge/open%20to%20work-14141f?style=flat-square" alt="Open to work" />
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 <tr>
 <td width="330" valign="top">
 
-**Hi, I'm Nihad Musa** — a Java backend developer based in Azerbaijan.
+**Hi, I'm Nihad Musayev** — a software developer based in Azerbaijan.
 
 - Building Spring Boot microservices and REST APIs
 - Daily stack: Java 21, Gradle, PostgreSQL, Redis, Kafka
@@ -147,7 +147,7 @@
 <br>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=nihadmusa&label=Profile%20views&color=8b949e&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=nihadmusa&label=Profile%20views&color=818cf8&style=flat" alt="Profile views" />
 </p>
 
 <p align="center">
@@ -226,7 +226,7 @@ Callback processing with idempotency keys and alerting.
 </table>
 
 <p align="center">
-  <a href="https://github.com/nihadmusa?tab=repositories"><img src="https://img.shields.io/badge/All%20repositories-161b22?style=flat-square&logo=github&logoColor=8b949e" alt="All repositories" /></a>
+  <a href="https://github.com/nihadmusa?tab=repositories"><img src="https://img.shields.io/badge/All%20repositories-14141f?style=flat-square&logo=github&logoColor=818cf8" alt="All repositories" /></a>
 </p>
 
 <p align="center">
@@ -236,15 +236,15 @@ Callback processing with idempotency keys and alerting.
 ## <img src="./assets/icons/mail.svg" width="28" height="28" alt="" /> `06 — Contact`
 
 <p align="center">
-  <a href="mailto:nihad.musa41@gmail.com"><img src="https://img.shields.io/badge/Email-nihad.musa41@gmail.com-161b22?style=flat-square&logo=gmail&logoColor=8b949e" alt="Email" /></a>
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-161b22?style=flat-square&logo=linkedin&logoColor=8b949e" alt="LinkedIn" /></a>
-  <a href="https://t.me/YOUR-TELEGRAM"><img src="https://img.shields.io/badge/Telegram-161b22?style=flat-square&logo=telegram&logoColor=8b949e" alt="Telegram" /></a>
-  <a href="https://github.com/nihadmusa"><img src="https://img.shields.io/badge/GitHub-161b22?style=flat-square&logo=github&logoColor=8b949e" alt="GitHub" /></a>
+  <a href="mailto:nihad.musa41@gmail.com"><img src="https://img.shields.io/badge/Email-nihad.musa41@gmail.com-14141f?style=flat-square&logo=gmail&logoColor=818cf8" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/nihad-musayev-766482393"><img src="https://img.shields.io/badge/LinkedIn-14141f?style=flat-square&logo=linkedin&logoColor=818cf8" alt="LinkedIn" /></a>
+  <a href="https://t.me/YOUR-TELEGRAM"><img src="https://img.shields.io/badge/Telegram-14141f?style=flat-square&logo=telegram&logoColor=818cf8" alt="Telegram" /></a>
+  <a href="https://github.com/nihadmusa"><img src="https://img.shields.io/badge/GitHub-14141f?style=flat-square&logo=github&logoColor=818cf8" alt="GitHub" /></a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Backend%20roles%20%C2%B7%20Remote%20or%20hybrid-161b22?style=flat-square" alt="Availability" />
-  <img src="https://img.shields.io/badge/Available%20for%20freelance-161b22?style=flat-square" alt="Freelance" />
+  <img src="https://img.shields.io/badge/Backend%20roles%20%C2%B7%20Remote%20or%20hybrid-14141f?style=flat-square" alt="Availability" />
+  <img src="https://img.shields.io/badge/Available%20for%20freelance-14141f?style=flat-square" alt="Freelance" />
 </p>
 
 <p align="center">
