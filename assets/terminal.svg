@@ -1,111 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-label="Animated code terminal">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 396" width="720" height="396" role="img" aria-label="Code sample">
   <defs>
-    <linearGradient id="winBg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0b0518"/>
-      <stop offset="100%" stop-color="#050310"/>
-    </linearGradient>
-    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00eaff" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ff2bd6" stop-opacity="0.30"/>
-    </linearGradient>
-    <linearGradient id="cursorGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00eaff"/>
-      <stop offset="100%" stop-color="#b14aff"/>
-    </linearGradient>
-    <filter id="cGlow" x="-50%" y="-120%" width="200%" height="340%">
-      <feGaussianBlur stdDeviation="3.5" result="b"/>
+    <filter id="glowT" x="-60%" y="-120%" width="220%" height="340%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="barGlow" x="-40%" y="-200%" width="180%" height="500%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="bodyClip"><rect x="0" y="42" width="760" height="358"/></clipPath>
+
     <style>
-      @keyframes type {
-        0%   { opacity: 0; }
-        1.2% { opacity: 1; }
-        92%  { opacity: 1; }
-        100% { opacity: 1; }
+      .bg   { fill: #0d1117; }
+      .bar  { fill: #161b22; }
+      .bd   { fill: none; stroke: #21262d; stroke-width: 1.2; }
+      .sep  { stroke: #21262d; stroke-width: 1; }
+      .num  { fill: #484f58; }
+      .code { fill: #c9d1d9; }
+      .kw   { fill: #e6edf3; font-weight: 600; }
+      .anno { fill: #8b949e; font-style: italic; }
+      .dot  { fill: #30363d; }
+      .ttl  { fill: #6e7681; }
+      .cur  { fill: #c9d1d9; }
+
+      /* each group owns a 3.5s window of the 14s loop.
+         negative delays keep the stagger permanent across loops. */
+      @keyframes reveal {
+        0%     { opacity: 0; }
+        1.5%   { opacity: 1; }
+        23.5%  { opacity: 1; }
+        25%    { opacity: 0; }
+        100%   { opacity: 0; }
       }
-      @keyframes blink {
-        0%,49%   { opacity: 1; }
-        50%,100% { opacity: 0; }
+      @keyframes caretBreath { 0%,100% { opacity: .65 } 50% { opacity: 1 } }
+
+      .g1 { animation: reveal 14s linear infinite;            animation-delay: 0; }
+      .g2 { animation: reveal 14s linear infinite;            animation-delay: -3.5s; }
+      .g3 { animation: reveal 14s linear infinite;            animation-delay: -7s; }
+      .g4 { animation: reveal 14s linear infinite;            animation-delay: -10.5s; }
+      .cb { animation: caretBreath 2.8s ease-in-out infinite; }
+
+      @media (prefers-color-scheme: light) {
+        .bg   { fill: #ffffff; }
+        .bar  { fill: #f6f8fa; }
+        .bd   { stroke: #d0d7de; }
+        .sep  { stroke: #d0d7de; }
+        .num  { fill: #8c959f; }
+        .code { fill: #24292f; }
+        .kw   { fill: #1f2328; }
+        .anno { fill: #59636e; }
+        .dot  { fill: #afb8c1; }
+        .ttl  { fill: #818b98; }
+        .cur  { fill: #24292f; }
       }
-      @keyframes winPulse {
-        0%,100% { stroke-opacity: .55; }
-        50% { stroke-opacity: 1; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .g1, .g2, .g3, .g4 { animation: none; opacity: 1; }
+        .cb { animation: none; }
       }
     </style>
   </defs>
 
-  <rect width="760" height="400" rx="14" fill="url(#winBg)" stroke="#6a2fb5" stroke-width="1.5" style="animation:winPulse 4s ease-in-out infinite;"/>
+  <rect class="bg" width="720" height="396" rx="14"/>
+  <rect class="bd" x="0.6" y="0.6" width="718.8" height="394.8" rx="14"/>
 
   <!-- title bar -->
-  <path d="M14 0 h732 a14 14 0 0 1 14 14 v28 h-760 v-28 a14 14 0 0 1 14 -14 z" fill="#150a28"/>
-  <rect x="0" y="42" width="760" height="1.2" fill="url(#barGrad)" filter="url(#barGlow)"/>
+  <path class="bar" d="M14 0 h692 a14 14 0 0 1 14 14 v26 h-720 v-26 a14 14 0 0 1 14 -14 z"/>
+  <circle class="dot" cx="26" cy="20" r="4"/>
+  <circle class="dot" cx="42" cy="20" r="4"/>
+  <circle class="dot" cx="58" cy="20" r="4"/>
+  <text x="360" y="25" text-anchor="middle" class="ttl"
+        font-family="ui-monospace,'Cascadia Code',Consolas,monospace"
+        font-size="12.5" letter-spacing="1.2">OrderController.java</text>
+  <line class="sep" x1="0" y1="40" x2="720" y2="40"/>
 
-  <circle cx="26" cy="21" r="6" fill="#ff3b6b" filter="url(#cGlow)">
-    <animate attributeName="opacity" values="1;.55;1" dur="2.6s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="48" cy="21" r="6" fill="#ffc93c" filter="url(#cGlow)">
-    <animate attributeName="opacity" values="1;.55;1" dur="3.4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="70" cy="21" r="6" fill="#25ff9d" filter="url(#cGlow)">
-    <animate attributeName="opacity" values="1;.55;1" dur="4.2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="380" y="26" text-anchor="middle" fill="#a98fd6"
-        font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="14" letter-spacing="1.5">NihadMusa.java</text>
+  <!-- code: every group is one frame of the build-up -->
+  <g font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="15">
 
-  <g clip-path="url(#bodyClip)" font-family="ui-monospace,'Cascadia Code',Consolas,monospace" font-size="15" filter="url(#cGlow)">
-    <text x="22" y="72"><tspan fill="#5f4b8a">1</tspan><tspan fill="#ff2bd6"> public class </tspan><tspan fill="#ffd166">BackendEngineer</tspan><tspan fill="#e6dcff"> {</tspan></text>
-
-    <g style="animation:type 9s linear infinite;">
-      <text x="22" y="104"><tspan fill="#5f4b8a">2</tspan><tspan fill="#ffd166">   @Bean</tspan></text>
-      <text x="22" y="130"><tspan fill="#5f4b8a">3</tspan><tspan fill="#ffd166">   SecurityFilterChain</tspan><tspan fill="#e6dcff"> auth(</tspan><tspan fill="#00eaff">HttpSecurity</tspan><tspan fill="#e6dcff"> http)</tspan><tspan fill="#e6dcff"> {</tspan></text>
+    <g>
+      <text x="24" y="70" class="num">1</text>
+      <text x="62" y="70" class="anno">@RestController</text>
+      <text x="24" y="96" class="num">2</text>
+      <text x="62" y="96" class="anno">@RequestMapping("/api/v1/orders")</text>
     </g>
 
-    <g style="animation:type 9s linear infinite; animation-delay:.45s;">
-      <text x="22" y="156"><tspan fill="#5f4b8a">4</tspan><tspan fill="#00eaff">     http</tspan><tspan fill="#e6dcff">.csrf(</tspan><tspan fill="#25ff9d">AbstractHttpConfigurer</tspan><tspan fill="#e6dcff">::disable)</tspan></text>
+    <g class="g1">
+      <text x="24" y="122" class="num">3</text>
+      <text x="62" y="122"><tspan class="kw">public class</tspan><tspan class="code"> </tspan><tspan class="code">OrderController</tspan><tspan class="code"> {</tspan></text>
+      <text x="24" y="148" class="num">4</text>
+      <text x="62" y="148" class="code">    </text>
+      <text x="24" y="174" class="num">5</text>
+      <text x="62" y="174"><tspan class="kw">private final</tspan><tspan class="code"> </tspan><tspan class="code">OrderService</tspan><tspan class="code"> service;</tspan></text>
+      <text x="24" y="200" class="num">6</text>
+      <text x="62" y="200" class="code">    </text>
     </g>
 
-    <g style="animation:type 9s linear infinite; animation-delay:.9s;">
-      <text x="22" y="182"><tspan fill="#5f4b8a">5</tspan><tspan fill="#00eaff">     http</tspan><tspan fill="#e6dcff">.authorizeHttpRequests(r -&gt; r</tspan></text>
-      <text x="40" y="208"><tspan fill="#5f4b8a">6</tspan><tspan fill="#e6dcff">       .requestMatchers(</tspan><tspan fill="#ff9f68">"/api/**"</tspan><tspan fill="#e6dcff">).permitAll()</tspan></text>
+    <g class="g2">
+      <text x="24" y="226" class="num">7</text>
+      <text x="62" y="226" class="anno">@GetMapping("/{id}")</text>
+      <text x="24" y="252" class="num">8</text>
+      <text x="62" y="252"><tspan class="kw">public</tspan><tspan class="code"> </tspan><tspan class="code">ResponseEntity</tspan><tspan class="code">&lt;</tspan><tspan class="code">Order</tspan><tspan class="code">&gt; </tspan><tspan class="code">byId(</tspan><tspan class="anno">@PathVariable</tspan><tspan class="code"> </tspan><tspan class="code">UUID id) {</tspan></text>
     </g>
 
-    <g style="animation:type 9s linear infinite; animation-delay:1.35s;">
-      <text x="22" y="234"><tspan fill="#5f4b8a">7</tspan><tspan fill="#00eaff">     return http</tspan><tspan fill="#e6dcff">.build();</tspan></text>
-      <text x="22" y="260"><tspan fill="#5f4b8a">8</tspan><tspan fill="#e6dcff">   }</tspan></text>
+    <g class="g3">
+      <text x="24" y="278" class="num">9</text>
+      <text x="62" y="278"><tspan class="kw">return</tspan><tspan class="code"> service.</tspan><tspan class="code">find</tspan><tspan class="code">(id)</tspan></text>
+      <text x="40" y="304" class="num">10</text>
+      <text x="78" y="304"><tspan class="code">      .</tspan><tspan class="code">map</tspan><tspan class="code">(</tspan><tspan class="code">ResponseEntity</tspan><tspan class="code">::ok)</tspan></text>
+      <text x="40" y="330" class="num">11</text>
+      <text x="78" y="330"><tspan class="code">      .</tspan><tspan class="code">orElseGet</tspan><tspan class="code">(() -&gt; </tspan><tspan class="code">ResponseEntity</tspan><tspan class="code">.</tspan><tspan class="code">notFound</tspan><tspan class="code">().</tspan><tspan class="code">build</tspan><tspan class="code">());</tspan></text>
     </g>
 
-    <g style="animation:type 9s linear infinite; animation-delay:1.8s;">
-      <text x="22" y="292"><tspan fill="#ff2bd6">9</tspan><tspan fill="#e6dcff">   // cache-aside + redis ttl</tspan></text>
-      <text x="22" y="318"><tspan fill="#ff2bd6">10</tspan><tspan fill="#ffd166">  private</tspan><tspan fill="#e6dcff"> Optional&lt;User&gt; </tspan><tspan fill="#25ff9d">load</tspan><tspan fill="#e6dcff">(String id)</tspan><tspan fill="#e6dcff"> {</tspan></text>
-      <text x="40" y="344"><tspan fill="#ff2bd6">11</tspan><tspan fill="#e6dcff">    </tspan><tspan fill="#25ff9d">return</tspan><tspan fill="#e6dcff"> repo.findById(id);</tspan></text>
-      <text x="22" y="370"><tspan fill="#ff2bd6">12</tspan><tspan fill="#e6dcff">  }</tspan></text>
+    <g class="g4">
+      <text x="24" y="356" class="num">12</text>
+      <text x="62" y="356" class="code">}</text>
+      <rect class="cur cb" x="72" y="343" width="8.5" height="17" rx="1" filter="url(#glowT)"/>
+      <text x="24" y="382" class="num">13</text>
+      <text x="62" y="382" class="code">}</text>
     </g>
-
-    <text x="40" y="370" style="animation:blink 1.05s step-end infinite;">
-      <rect x="30" y="356" width="11" height="19" fill="url(#cursorGrad)"/>
-    </text>
   </g>
-
-  <!-- right side glowing stat cards -->
-  <g transform="translate(516 70)" filter="url(#cGlow)">
-    <rect width="238" height="300" rx="12" fill="#0d0722" fill-opacity="0.75" stroke="#3a1d6b"/>
-    <text x="119" y="34" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="#a98fd6" letter-spacing="3">STACK</text>
-    <text x="24" y="76"  font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#00eaff">Java 21</text>
-    <text x="24" y="108" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#b14aff">Spring Boot</text>
-    <text x="24" y="140" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#ff2bd6">Microservices</text>
-    <text x="24" y="172" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#25ff9d">Redis / Kafka</text>
-    <text x="24" y="204" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#ffd166">JWT / OAuth2</text>
-    <text x="24" y="236" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#7ae0ff">PostgreSQL</text>
-    <text x="24" y="268" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="#ff9f68">Docker</text>
-    <rect x="24" y="284" width="190" height="2" fill="url(#barGrad)">
-      <animate attributeName="width" values="40;190;40" dur="3.6s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <rect x="14" y="56" width="486" height="316" rx="10" fill="none" stroke="#2c1460" stroke-width="1"/>
 </svg>

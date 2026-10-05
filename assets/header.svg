@@ -1,162 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="Nihad Musa - Java Backend Developer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Nihad Musa">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#04010c"/>
-      <stop offset="45%" stop-color="#0b0620"/>
-      <stop offset="100%" stop-color="#04010c"/>
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#8b949e" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#8b949e" stop-opacity=".75"/>
+      <stop offset="100%" stop-color="#8b949e" stop-opacity="0"/>
     </linearGradient>
 
-    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#00eaff" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#00eaff" stop-opacity="0"/>
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="glowPink" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#ff2bd6" stop-opacity="0.40"/>
-      <stop offset="100%" stop-color="#ff2bd6" stop-opacity="0"/>
-    </radialGradient>
-
-    <linearGradient id="neonTxt" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00eaff"/>
-      <stop offset="42%" stop-color="#7a5cff"/>
-      <stop offset="100%" stop-color="#ff2bd6"/>
-    </linearGradient>
-
-    <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00eaff" stop-opacity="0"/>
-      <stop offset="45%" stop-color="#00eaff" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#00eaff" stop-opacity="0"/>
-    </linearGradient>
-
-    <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00eaff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00eaff" stop-opacity="0.28"/>
-      <stop offset="100%" stop-color="#00eaff" stop-opacity="0"/>
-    </linearGradient>
-
-    <filter id="heavy" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="13" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="mid" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
+    <filter id="softGlow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="small" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+    <filter id="lineGlow" x="-30%" y="-400%" width="160%" height="900%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
-      <path d="M34 0 H0 V34" fill="none" stroke="#3b1f6e" stroke-width="0.9" stroke-opacity="0.55"/>
-      <animateTransform attributeName="patternTransform" type="translate"
-                        from="0 0" to="34 34" dur="3.2s" repeatCount="indefinite"/>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.1" fill="#30363d"/>
     </pattern>
 
-    <clipPath id="s1"><rect x="0" y="94"  width="1000" height="9"/></clipPath>
-    <clipPath id="s2"><rect x="0" y="128" width="1000" height="7"/></clipPath>
-    <clipPath id="s3"><rect x="0" y="160" width="1000" height="12"/></clipPath>
-
     <style>
-      @keyframes flicker {
-        0%,19%,21%,100% { opacity: 1; }
-        20% { opacity: .35; }
-        40% { opacity: .85; }
-        42% { opacity: 1; }
+      .bg   { fill: #0d1117; }
+      .bd   { fill: none; stroke: #21262d; stroke-width: 1.2; }
+      .t1   { fill: #e6edf3; }
+      .t2   { fill: #8b949e; }
+      .t3   { fill: #6e7681; }
+      .accent { fill: #c9d1d9; }
+
+      @keyframes breathe { 0%,100% { opacity: .93 } 50% { opacity: 1 } }
+      @keyframes pulse   { 0%,100% { opacity: .3 } 50% { opacity: 1 } }
+      @keyframes haloDrift {
+        0%   { transform: translateX(-120px); }
+        100% { transform: translateX(120px); }
       }
-      @keyframes pulseDot {
-        0%,100% { opacity: 1; r: 6; }
-        50% { opacity: .25; r: 4; }
+      .breathe { animation: breathe 9s ease-in-out infinite; }
+      .pulse   { animation: pulse 4s ease-in-out infinite; }
+      .halo    { animation: haloDrift 14s ease-in-out infinite alternate; }
+
+      @media (prefers-color-scheme: light) {
+        .bg   { fill: #ffffff; }
+        .bd   { stroke: #d0d7de; }
+        .t1   { fill: #1f2328; }
+        .t2   { fill: #59636e; }
+        .t3   { fill: #818b98; }
+        .accent { fill: #32383f; }
       }
-      @keyframes breathe {
-        0%,100% { opacity: .85; }
-        50% { opacity: .45; }
-      }
-      @keyframes driftY {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(34px); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .breathe, .pulse, .halo { animation: none; }
+        .shine { display: none; }
       }
     </style>
   </defs>
 
-  <rect width="1000" height="300" fill="url(#bg)"/>
-  <g style="animation:driftY 3.2s linear infinite;">
-    <rect x="-34" y="-34" width="1068" height="368" fill="url(#grid)"/>
+  <rect class="bg" width="1000" height="250"/>
+  <rect class="bd" x="0.6" y="0.6" width="998.8" height="248.8"/>
+
+  <!-- faint static dot grid -->
+  <rect x="0" y="0" width="1000" height="250" fill="url(#dots)" opacity=".55"/>
+  <ellipse class="halo" cx="500" cy="110" rx="420" ry="150" fill="url(#halo)"/>
+
+  <!-- name -->
+  <g class="breathe">
+    <text x="500" y="140" text-anchor="middle"
+          font-family="ui-sans-serif,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
+          font-size="74" font-weight="700" letter-spacing="3"
+          class="t1" filter="url(#softGlow)">Nihad Musa</text>
   </g>
 
-  <ellipse cx="215" cy="70"  rx="300" ry="190" fill="url(#glowCyan)"/>
-  <ellipse cx="800" cy="245" rx="300" ry="190" fill="url(#glowPink)"/>
-
-  <!-- horizon sun arcs -->
-  <g opacity="0.5" filter="url(#small)">
-    <path d="M330 232 a170 170 0 0 1 340 0" fill="none" stroke="#ff2bd6" stroke-width="1.4"/>
-    <path d="M300 232 a200 200 0 0 1 400 0" fill="none" stroke="#ff2bd6" stroke-width="1.1"/>
-    <path d="M270 232 a230 230 0 0 1 460 0" fill="none" stroke="#7a5cff" stroke-width="0.9"/>
-  </g>
-
-  <!-- sweep light -->
-  <rect x="-320" y="0" width="320" height="300" fill="url(#sweepGrad)">
-    <animate attributeName="x" from="-320" to="1000" dur="4.6s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- glitch slices -->
-  <g clip-path="url(#s1)" opacity="0.85">
-    <text x="500" y="182" text-anchor="middle" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif"
-          font-size="86" font-weight="800" letter-spacing="7" fill="#00eaff">NIHAD MUSA</text>
-    <animateTransform attributeName="transform" type="translate" calcMode="discrete"
-                      values="0 0; -18 0; 14 0; 0 0; 0 0" dur="3.4s" repeatCount="indefinite"/>
-  </g>
-  <g clip-path="url(#s2)" opacity="0.85">
-    <text x="500" y="182" text-anchor="middle" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif"
-          font-size="86" font-weight="800" letter-spacing="7" fill="#ff2bd6">NIHAD MUSA</text>
-    <animateTransform attributeName="transform" type="translate" calcMode="discrete"
-                      values="0 0; 16 0; -10 0; 0 0; 0 0" dur="3.4s" repeatCount="indefinite"/>
-  </g>
-  <g clip-path="url(#s3)" opacity="0.7">
-    <text x="500" y="182" text-anchor="middle" font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif"
-          font-size="86" font-weight="800" letter-spacing="7" fill="#eaff00">NIHAD MUSA</text>
-    <animateTransform attributeName="transform" type="translate" calcMode="discrete"
-                      values="0 0; -8 0; 6 0; 0 0; 0 0" dur="3.4s" repeatCount="indefinite"/>
-  </g>
-
-  <!-- main text -->
-  <text x="500" y="182" text-anchor="middle"
-        font-family="'Segoe UI',Inter,Helvetica,Arial,sans-serif"
-        font-size="86" font-weight="800" letter-spacing="7"
-        fill="url(#neonTxt)" filter="url(#heavy)"
-        style="animation:flicker 5.5s infinite;">NIHAD MUSA</text>
-
-  <text x="500" y="222" text-anchor="middle"
+  <!-- role -->
+  <text x="500" y="176" text-anchor="middle"
         font-family="ui-monospace,'Cascadia Code',Consolas,monospace"
-        font-size="20" letter-spacing="5" fill="#8ff6ff" filter="url(#small)"
-        style="animation:breathe 3.6s ease-in-out infinite;">JAVA BACKEND ENGINEER</text>
+        font-size="18" letter-spacing="4" class="t2">JAVA BACKEND DEVELOPER</text>
+
+  <!-- hairline + slow shimmer -->
+  <g filter="url(#lineGlow)">
+    <rect x="330" y="198" width="340" height="1.2" rx="0.6" fill="url(#hairGrad)"/>
+    <rect class="shine" x="330" y="197" width="72" height="2.4" rx="1.2" fill="url(#shineGrad)">
+      <animate attributeName="x" from="296" to="632" dur="10s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <!-- status -->
-  <g transform="translate(500 254)" filter="url(#small)">
-    <circle cx="-72" cy="0" r="6" fill="#25ff9d" style="animation:pulseDot 1.5s ease-in-out infinite;">
-      <animate attributeName="r" values="5;8;5" dur="1.5s" repeatCount="indefinite"/>
-    </circle>
-    <text x="-56" y="6" font-family="ui-monospace,'Cascadia Code',Consolas,monospace"
-          font-size="15" letter-spacing="3" fill="#25ff9d">SYSTEM ONLINE</text>
+  <g transform="translate(500 226)">
+    <circle cx="-58" cy="0" r="3.2" class="accent pulse"/>
+    <text x="-44" y="5" font-family="ui-monospace,'Cascadia Code',Consolas,monospace"
+          font-size="13" letter-spacing="3" class="t3">OPEN TO WORK</text>
   </g>
-
-  <!-- corner brackets -->
-  <g stroke="#00eaff" stroke-width="2.5" fill="none" opacity="0.85" style="animation:breathe 4s ease-in-out infinite;">
-    <path d="M22 62 V22 H62"/><path d="M938 22 H978 V62"/>
-    <path d="M22 238 V278 H62"/><path d="M938 278 H978 V238"/>
-  </g>
-  <g stroke="#ff2bd6" stroke-width="1.4" fill="none" opacity="0.6">
-    <path d="M78 22 H160"/><path d="M840 22 H922"/>
-  </g>
-
-  <!-- scanline -->
-  <rect x="0" y="-90" width="1000" height="90" fill="url(#scanGrad)">
-    <animate attributeName="y" values="-90;300" dur="5s" repeatCount="indefinite"/>
-  </rect>
-  <rect width="1000" height="300" fill="none" stroke="#ff2bd6" stroke-width="2" stroke-opacity="0.55"/>
 </svg>
